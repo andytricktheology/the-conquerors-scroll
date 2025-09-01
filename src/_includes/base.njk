@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}The Conqueror's Scroll{% endblock %}</title>
+  <meta name="description" content="{% block description %}Biblical Wisdom, Truth, and Secrets from The Righteous Conqueror{% endblock %}" />
+  <meta name="author" content="The Righteous Conqueror" />
+  <meta name="theme-color" content="#330040" />
+  <meta property="og:title" content="{% block ogtitle %}{{ title }}{% endblock %}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:image" content="/img/logo.png" />
+  <link rel="preload" href="/css/main.css" as="style" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="icon" href="/img/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <script>
+    document.documentElement.classList.add(localStorage.theme || 'light');
+  </script>
+</head>
+<body class="bg-gradient text-white min-h-screen font-sans leading-relaxed">
+  {% include "navbar.njk" %}
+  <main class="container mx-auto px-4 py-8">
+    {% block content %}{% endblock %}
+  </main>
+  {% include "footer.njk" %}
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
