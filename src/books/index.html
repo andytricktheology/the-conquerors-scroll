@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+title: My Books
+---
+
+<h2 class="text-3xl mb-6">My Books</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {% for book in books %}
+  <div class="card">
+    <img src="{{ book.coverImage }}" alt="{{ book.title }}" class="w-full rounded mb-4" />
+    <h3 class="text-2xl">{{ book.title }}</h3>
+    <p>{{ book.subtitle }}</p>
+    <a href="{{ book.amazonLink }}" target="_blank" class="btn-primary mt-4">Buy on Amazon</a>
+  </div>
+  {% endfor %}
+</div>

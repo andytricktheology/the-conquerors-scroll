@@ -1,0 +1,12 @@
+body { background: linear-gradient(135deg, #c900ff, #330040); }
+.light body { background: white; color: #1a1a1a; }
+h1, .btn-primary { background: linear-gradient(135deg, #c900ff, #330040); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.btn-primary { color: white; border: none; padding: 12px 24px; font-weight: 600; border-radius: 6px; position: relative; overflow: hidden; cursor: pointer; }
+.btn-primary::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: white; opacity: 0.3; transition: width 0.5s ease; }
+.btn-primary:hover::before { width: 100%; }
+.card { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+.logo { width: 60px; height: 60px; border-radius: 50%; }
+footer { text-align: center; padding: 2rem 0; color: rgba(255,255,255,0.7); }
+.share-btn { padding: 8px 12px; border-radius: 6px; color: white; text-decoration: none; }
+.theme-toggle { background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: white; }
