@@ -11,12 +11,12 @@ module.exports = function(eleventyConfig) {
     return require("marked")(content);
   });
 
-  // ✅ SET CORRECT DIRECTORIES
+  // ✅ CORRECT DIR CONFIG
   return {
     dir: {
-      input: "src",           // ← This tells Eleventy: "Start in src/"
-      output: "_site",        // Output to _site/
-      includes: "_includes"   // But: "_includes" is RELATIVE TO input
+      input: "src",           // Read from src/
+      output: "_site",        // Write to _site/
+      includes: "_includes"   // Look for includes in src/_includes/ (relative to input)
     },
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
